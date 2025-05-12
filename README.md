@@ -1,6 +1,6 @@
 # Search the BNF's Archives et Manuscrits
 
-Scraper for using the Advanced Search of the BNF's Archives et Manuscrits website.
+Scraper for using the [Advanced Search](https://archivesetmanuscrits.bnf.fr/pageRechercheAvancee.html) of the BNF's Archives et Manuscrits website.
 
 ## Install
 
