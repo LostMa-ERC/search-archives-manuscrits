@@ -11,6 +11,7 @@ def clean_cote(cote: str) -> tuple[str, str | None]:
         return (None, None)
     else:
         idno = match[0].strip()
+        # Add remove leading zeros on idno
         if "arsenal" in cote.lower():
             dept = "Arsenal"
             cleaned_cote = f"Ms-{idno}"
