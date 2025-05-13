@@ -18,9 +18,17 @@ playwright install
 
 ## Run
 
-This scraper takes a CSV file, which contains the shelfmark (_cote_ in French) of manuscripts in the BNF, and adds to it the ARK (Archival Resource Key) and page link for the matching manuscript if the search produced only one result.
+This scraper takes in a shelfmark (_cote_ in French) of manuscripts in the BNF and enriches it with the ARK (Archival Resource Key) and page link for the matching manuscript--if the search produced only one result.
 
-Therefore, users need to provide the following when running the `searcham` (Search Archives et Manuscripts) command:
+To test it on a single _cote_, simply run the `searcham cote` subcommand with the _cote_ in quotation marks.
+
+```
+$ searcham cote "nouvelles acquisitions latines 993"
+Searching 'nouvelles acquisitions latines 993' ⠹ 0:00:01
+SearchResult(cote='NAL 993', ark='/ark:/12148/cc71638k/cd0e403', page='https://archivesetmanuscrits.bnf.fr/ark:/12148/cc71638k/cd0e403')
+```
+
+To run the scraper on a set of _cotes_, run the `searcham file` subcommand on a CSV file containing the _cotes_ with the following parameters:
 
 - `-i` / `--infile` : the path to the CSV file
 - `-c` / `--cote-column` : the name of the column in the CSV file that contains the shelfmark (_cote_)
@@ -31,7 +39,7 @@ searcham -i input.csv -c cote -o output.csv
 Scraping ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5/5 0:00:05
 ```
 
-If you want to observe the Chrome browswer, add the flag `--observe` to the `searcham` command. This will automatically open a browser window on your machine, which will load and interact with the search page, and it will automatically close when the program has finished.
+If you want to observe the Chrome browswer, add the flag `--observe`. This will automatically open a browser window on your machine, which will load and interact with the search page, and it will automatically close when the program has finished.
 
 ### Input
 
