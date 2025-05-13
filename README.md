@@ -14,7 +14,7 @@ Scraper for using the [Advanced Search](https://archivesetmanuscrits.bnf.fr/page
 playwright install
 ```
 
-> The Archives et Manuscrits' advanced search does not operate on a Restful API. We need to emulate a browswer in order to run a search. For this reason, we use [`playwright`](https://playwright.dev/python/docs/library), which creates a headless Chrome browser.
+> The Archives et Manuscrits' advanced search does not operate on a Restful API. We need to emulate a browser in order to run a search. For this reason, we use [`playwright`](https://playwright.dev/python/docs/library), which creates a headless Chrome browser.
 
 ## Run
 
